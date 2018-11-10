@@ -13,7 +13,6 @@ Mean_Humidity INT,
 Min_Humidity INT,
 Max_Wind_Speed_MPH INT,
 Mean_Wind_Speed_MPH INT,
-Min_Wind_Speed_MPH INT,
 Max_Gust_Speed_MPH INT,
 Precipitation_IN INT,
 Events VARCHAR (100)
@@ -26,8 +25,10 @@ name VARCHAR (200),
 lat double,
 lng double,
 install_date DATE,
-install_dock INT,
-decomission_date DATE
+install_dockcount INT,
+modification_date Date,
+current_dockcount Int,
+decommission_date DATE
 )
 ;
 
@@ -51,6 +52,10 @@ FOREIGN KEY (from_station_id)
 )
 ;
 
+
+Select * from weather;
+Select * from station;
+select * from trip;
 
 
 
